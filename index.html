@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <title>Functions</title>
+</head>
+<body>
+
+
+    <div class="container">
+
+    <aside class="condition" id="condition"> 
+
+            <div id="condition1"> 
+                
+                <p>მოცემულია მასივი [{name: 'Temo', age: 25}, {name: 'Lasha', age: 21}, {name: 'Ana', age: 28}]  </p>
+                <p>დაწერე ფუნქცია, რომელიც პარამეტრად მიიღებს user - ების მასივს და დააბრუნებს ყველაზე პატარა ასაკის მქონე ადამიანის სახელს.</p>
+                
+                
+                </div>
+            <div id="condition2">
+                    <p>
+                        დაწერე ფუნქცია, რომელიც პარამეტრად მიიღებს user ობიექტს და დააბრუნებს იგივე მნიშვნელობების მქონე ახალ (განსხვავებულ) ობიექტს.
+                    </p>
+
+            </div>
+            <div id="condition3">
+                <p>
+                    დაწერე პროგრამა, სადაც ორი a და b მომხმარებლები აგორებენ კამათელს მანამ,  სანამ არ გაგორდება, რომელიც უფრო ნაკლებ ცდაში გააგორებს სამიანს ის არის გამარჯვებული
+                </p>
+            </div>
+    
+    </aside>
+
+
+            <div class="boardgame" id="boardgame">
+
+                        <div class="childboard">
+
+
+                            <div class="player1" id="player1">
+                                    <h1>Player 1</h1>
+                                    <div class="yourturn" id="yourturn1"> 
+                                            <h3>Your turn</h3>
+                                        <button class="roll" id="roll1">Roll</button>
+                                    </div>
+                            </div>
+
+
+                            <div class="table" id="table">
+                        
+                                    <div class="score"> 
+                                        <num id="score1">0</num>
+                                        :
+                                        <num id="score2">0</num>
+                                    </div>
+
+
+                                    <div class="board">
+                                        <div class="half">
+                                            <div class="dice" id="dice1"></div>
+                                        </div>
+                                        <div class="half">
+                                            <div class="dice" id="dice2"></div>
+                                        </div>
+
+                                        
+                                    </div>
+                                    
+
+                                    <button class="start" id="start"> Start</button>
+                                    <h1 class="winner" id="winner">  </h1>
+
+                            </div>
+
+
+
+                            <div class="player2" id="player2" >
+                                <h1>Player 2</h1>
+                                <div class="yourturn" id="yourturn2"> 
+                                     <h3>Your turn</h3>
+                                <button class="roll" id="roll2">Roll </button>
+                            </div>  
+                        </div>
+
+
+                        </div>
+
+
+                        <div class="setting">
+                            <button class="back" id="back"> Back</button>
+                            <button class="restartgame" id="restartgame"> Restart</button>
+                            <button class="auto" id="auto"> Auto</button>
+
+                        </div>
+
+            </div>
+
+
+
+
+
+
+            <div  class="cont" id="cont"> 
+
+                <div class="buttons">
+                <button id="homework1">Function 1</button>
+                <button id="homework2">Function 2</button>
+                <button id="homework3">Dice Roll Game</button>
+                </div>
+
+                    <div class="clearconsol">
+                        <a  href="index.html"> <h6>Clear Consol</h6> </a>                  
+                    </div>
+                
+
+                <div class="console"></div>
+
+            </div>
+            <aside class="functions" id="functions">
+
+
+                    <div id="function1">
+                        <p>const users = [</p>
+                        <p>    { name: 'Temo', age: 25 },</p>
+                        <p>    { name: 'Lasha', age: 21 },</p>
+                        <p>    { name: 'ana', age: 28 },</p>
+                        <p>};</p>
+                        <br>
+                        <p>function finder(users) {</p>
+                        <p>    let youngest = users[0];</p>
+                        <p> </p>
+                        <br>
+                        <p>    for (let i = 1; i < users.length; i++) {</p>
+                        <p>        if (users[i].age < youngest.age) {</p>
+                        <p>          youngest = users[i];</p>
+                        <p>        }}</p>
+                        <br>
+                        <p>    return youngest.name;</p>
+                        <p>}</p>
+                        <br>
+                        <p>console.log(finder(users));</p>
+
+
+                        </div>
+                        
+                       <div id="function2">
+
+                       
+                        <p>let user = {</p>
+                            <p>    name: 'nika',</p>
+                            <p>    age: 25,</p>
+                            <p>    city: 'batumi',</p>
+                            <p>    married: false</p>
+                            <p>};</p>
+                            <br>
+                            <p>function creator(user) {</p>
+                            <p>   </p>
+                            <br>
+                            <p>  const userobject = Object.entries(user);</p>
+                            <p>  const user2 = userobject.map(function ([key, value]) {</p>
+                            <p>  return { [key]: value }; </p>
+                            <p>   }); </p>
+                                <br>
+                                <p>return user2;</p>
+                                <p>}</p>
+                                <br>
+                                <p>let user2 = creator(user)</p>
+                                <br>
+                                <br>
+                                <p>console.log(user===user2);</p>
+                                <p>console.log(creator(user));</p>
+
+                       </div> 
+
+
+
+                       <div id="function3">
+                        
+
+
+
+
+
+                       </div> 
+            
+            </aside>
+            
+        </div>
+          
+
+            
+    <script src="app.js"></script>
+</body>
+</html>
